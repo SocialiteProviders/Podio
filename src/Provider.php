@@ -12,7 +12,9 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://podio.com/oauth/authorize', $state);
+        return $this->buildAuthUrlFromBase(
+            'https://podio.com/oauth/authorize', $state
+        );
     }
 
     /**
@@ -28,7 +30,8 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://api.podio.com/user/status', [
+        $response = $this->getHttpClient()->get(
+            'https://api.podio.com/user/status', [
             'headers' => [
                 'Authorization' => 'Bearer '.$token,
             ],
@@ -43,11 +46,9 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id'       => $user['profile']['user_id'],
-            'nickname' => $user['profile']['name'],
-            'name'     => null,
-            'email'    => $user['profile']['mail'][0],
-            'avatar'   => null,
+            'id' => $user['profile']['user_id'],
+            'nickname' => $user['profile']['name'], 'name' => null,
+            'email' => $user['profile']['mail'][0], 'avatar' => null,
         ]);
     }
 
@@ -56,6 +57,8 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getTokenFields($code)
     {
-        return array_merge(parent::getTokenFields($code), ['grant_type' => 'authorization_code']);
+        return array_merge(parent::getTokenFields($code), [
+            'grant_type' => 'authorization_code',
+        ]);
     }
 }

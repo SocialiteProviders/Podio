@@ -5,8 +5,13 @@ use SocialiteProviders\Manager\SocialiteWasCalled;
 
 class PodioExtendSocialite
 {
+    /**
+     * Execute the provider.
+     */
     public function handle(SocialiteWasCalled $socialiteWasCalled)
     {
-        $socialiteWasCalled->extendSocialite('podio', __NAMESPACE__.'\Provider');
+        $socialiteWasCalled->extendSocialite(
+            'podio', __NAMESPACE__.'\Provider'
+        );
     }
 }
