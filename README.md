@@ -1,5 +1,11 @@
 # Podio OAuth2 Provider for Laravel Socialite
 
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/SocialiteProviders/Podio.svg?style=flat-square)](https://scrutinizer-ci.com/g/SocialiteProviders/Podio/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/socialiteproviders/podio.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/podio)
+[![Total Downloads](https://img.shields.io/packagist/dt/socialiteproviders/podio.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/podio)
+[![Latest Unstable Version](https://img.shields.io/packagist/vpre/socialiteproviders/podio.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/podio)
+[![License](https://img.shields.io/packagist/l/socialiteproviders/podio.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/podio)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Contents
